@@ -491,6 +491,7 @@ namespace Mirror
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void GeneratedSyncVarSetter<T>(T value, ref T field, ulong dirtyBit, Action<T, T> OnChanged)
         {
+            Debug.Log($"DirtyBitMask is {dirtyBit}");
             if (!SyncVarEqual(value, ref field))
             {
                 T oldValue = field;
